@@ -6,14 +6,13 @@ export default function Home() {
     <>
       <div className="bg-[#F5DDA7]">
         {/* Hero */}
-        <section  style={{
-              backgroundImage: 'url("/images/back_hero.avif")',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}>
-          <div
-            className="container flex flex-col mx-auto px-6 py-8"
-           >
+        <section
+          style={{
+            backgroundImage: 'url("/images/back_hero.avif")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}>
+          <div className="container flex flex-col mx-auto px-6 py-8">
             <div id="logo" className="mb-8 flex md:justify-center">
               <Image
                 className=""
@@ -58,8 +57,8 @@ export default function Home() {
 
         {/* About */}
         <section>
-          <div className="container flex flex-col mx-auto px-6 py-8 space-y-4 ">
-            <div>
+          <div className="container flex flex-col mx-auto px-6 py-8 space-y-4 md:flex-row md:gap-8">
+            <div className="md:w-1/2">
               <Image
                 className=""
                 src="/images/lari.avif"
@@ -68,7 +67,7 @@ export default function Home() {
                 alt="Foto de Larissa Godomski"
               />
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 md:w-1/2">
               <h1>Quem somos</h1>
               <p>
                 Eu sou Larissa Gadomski, advogada especializada em direito
@@ -85,9 +84,28 @@ export default function Home() {
                 previdenciário.
               </p>
 
-<div><p>+5 Anos de experiência</p></div>
-<div><p>Especialista em direito previdenciário</p></div>
-
+              <div className="flex w-fit space-x-3 border-[1px] rounded-full border-black py-3 px-6 items-center w-auto ">
+                <Image
+                  className="w-[24px] h-[24px]"
+                  src="/images/icon_xp.png"
+                  width={24}
+                  height={24}
+                  alt="Icone da balança"
+                />
+                <p className="w-full md:w-auto">+5 Anos de experiência</p>
+              </div>
+              <div className="flex w-fit space-x-3 border-[1px] rounded-full border-black py-3 px-6 items-center ">
+                <Image
+                  className="w-[24px] h-[24px]"
+                  src="/images/icon_law.png"
+                  width={24}
+                  height={24}
+                  alt="Icone da balança"
+                />
+                <p className="w-full md:w-auto">
+                  Especialista em direito previdenciário
+                </p>
+              </div>
 
               <Link href="" className="flex flex-row">
                 <p className="zapbutton ">
@@ -146,35 +164,80 @@ export default function Home() {
 
         {/* Beneficios */}
         <section className="goldradial">
-          <div className="container flex flex-col md:flex-row mx-auto px-6 py-8 space-y-4 md:px-8 md:py-16 md:space-x-8 md:space-y-0 xl:px-48 xl:py-20 xl:space-x-12 ">
-            <h1 className="">Benefícios previdenciários</h1>
-            <ul className="space-y-4">
-              <li>
-                <strong>Aposentadoria por idade:</strong> seja para
-                trabalhadores urbanos ou rurais, auxiliamos no processo de
-                aposentadoria por idade, garantindo que cada detalhe seja
-                tratado com a máxima atenção.
+          <div className="container flex flex-col  mx-auto px-6 py-8  md:px-8 md:py-16   xl:px-48 xl:py-20  space-y-8">
+            <h1 className="md:text-center">Benefícios<br></br>previdenciários</h1>
+            <ul className="space-y-4 [&>li]:flex [&>li]:flex-row [&>li]:gap-4 ">
+              <li className="">
+                <Image
+                  className="w-16 h-16"
+                  src="/images/icon_apos.png"
+                  width={64}
+                  height={64}
+                  alt="Icone Aposentadoria por idade"
+                />
+                <p>
+                  <strong>Aposentadoria por idade:</strong> seja para
+                  trabalhadores urbanos ou rurais, auxiliamos no processo de
+                  aposentadoria por idade, garantindo que cada detalhe seja
+                  tratado com a máxima atenção.
+                </p>
               </li>
               <li>
-                <strong>Aposentadoria por invalidez:</strong> em casos de
-                incapacidade para o trabalho, oferecemos suporte para garantir
-                seus direitos à aposentadoria por invalidez.
+                <Image
+                  className="w-16 h-16"
+                  src="/images/icon_inva.png"
+                  width={64}
+                  height={64}
+                  alt="Icone Aposentadoria por invalidez"
+                />
+                <p>
+                  <strong>Aposentadoria por invalidez:</strong> em casos de
+                  incapacidade para o trabalho, oferecemos suporte para garantir
+                  seus direitos à aposentadoria por invalidez.
+                </p>
               </li>
               <li>
-                <strong>Auxílio-doença:</strong> orientamos e representamos
-                clientes que necessitam de auxílio-doença devido a condições
-                médicas que impedem a continuidade do trabalho.
+                <Image
+                  className="w-16 h-16"
+                  src="/images/icon_doen.png"
+                  width={64}
+                  height={64}
+                  alt="Icone Auxílio-doença"
+                />
+                <p>
+                  <strong>Auxílio-doença:</strong> orientamos e representamos
+                  clientes que necessitam de auxílio-doença devido a condições
+                  médicas que impedem a continuidade do trabalho.
+                </p>
               </li>
               <li>
-                <strong>Loas para deficientes e idosos:</strong> auxiliamos na
-                obtenção do benefício de prestação continuada (loas) para
-                pessoas com deficiência ou idosos em situação de
-                vulnerabilidade.
+                <Image
+                  className="w-16 h-16"
+                  src="/images/icon_loas.png"
+                  width={64}
+                  height={64}
+                  alt="Icone Loas para deficientes e idosos"
+                />
+                <p>
+                  <strong>Loas para deficientes e idosos:</strong> auxiliamos na
+                  obtenção do benefício de prestação continuada (loas) para
+                  pessoas com deficiência ou idosos em situação de
+                  vulnerabilidade.
+                </p>
               </li>
               <li>
-                <strong>Salário-maternidade:</strong> oferecemos suporte para
-                mães garantirem seu direito ao salário-maternidade durante o
-                período de licença.
+                <Image
+                  className="w-16 h-16"
+                  src="/images/icon_mate.png"
+                  width={64}
+                  height={64}
+                  alt="Icone Salário-maternidade"
+                />
+                <p>
+                  <strong>Salário-maternidade:</strong> oferecemos suporte para
+                  mães garantirem seu direito ao salário-maternidade durante o
+                  período de licença.
+                </p>
               </li>
             </ul>
           </div>

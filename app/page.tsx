@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { EmblaCarousel } from "./sliders/areas";
 
 export default function Home() {
   return (
@@ -12,27 +13,34 @@ export default function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}>
-          <div className="container flex flex-col mx-auto px-6 py-8">
+          <div className="container flex flex-col mx-auto px-6 py-8 md:px-8 md:py-16   xl:px-48 xl:py-20">
             <div id="logo" className="mb-8 flex md:justify-center">
-              <Image
+              {/* <Image
                 className=""
                 src="/images/lg.svg"
                 width={97}
                 height={94}
                 alt="Larissa Godomski"
-              />
+              /> */}
             </div>
 
-            <div id="hero_content" className="md:flex md:flex-row">
-              <div className="space-y-4 md:w-1/2 flex flex-col justify-center">
+            <div id="hero_content" className="md:flex md:flex-row gap-8">
+              <div className="space-y-4 md:w-[400px] flex flex-col justify-center ">
+                <Image
+                  className=""
+                  src="/images/lg.svg"
+                  width={97}
+                  height={94}
+                  alt="Larissa Godomski"
+                />
                 <h1 className="">
                   Seja<br></br> Bem-Vindo(a)
                 </h1>
-                <p>
+                <p className="xl:text-xl">
                   Nosso escritório de advocacia é dedicado a oferecer suporte
                   jurídico especializado em direito previdenciário.
                 </p>
-                <p>
+                <p className="xl:text-xl">
                   Aqui, comprometemo-nos a proporcionar soluções eficazes e
                   personalizadas para suas questões previdenciárias.
                 </p>
@@ -42,9 +50,9 @@ export default function Home() {
                   </p>
                 </Link>
               </div>
-              <div className="hidden md:w-1/2 md:flex justify-center ">
+              <div className="hidden md:w-1/2 md:flex justify-center -mb-44">
                 <Image
-                  className="w-3/4"
+                  className="w-full"
                   src="/images/estatua.avif"
                   width={464}
                   height={763}
@@ -57,7 +65,7 @@ export default function Home() {
 
         {/* About */}
         <section>
-          <div className="container flex flex-col mx-auto px-6 py-8 space-y-4 md:flex-row md:gap-8">
+          <div className="container flex flex-col mx-auto px-6 py-8 space-y-4 md:flex-row md:gap-8 md:px-8 md:py-16   xl:px-48 xl:py-20 items-center">
             <div className="md:w-1/2">
               <Image
                 className=""
@@ -84,7 +92,7 @@ export default function Home() {
                 previdenciário.
               </p>
 
-              <div className="flex w-fit space-x-3 border-[1px] rounded-full border-black py-3 px-6 items-center w-auto ">
+              <div className="flex w-fit space-x-3 border-[1px] rounded-full border-black py-3 px-6 items-center">
                 <Image
                   className="w-[24px] h-[24px]"
                   src="/images/icon_xp.png"
@@ -118,43 +126,42 @@ export default function Home() {
 
         {/* Slider */}
         <section className="goldradial">
-          <div className="container flex flex-col mx-auto px-6 py-8 space-y-4 ">
+          <div className=" flex flex-col mx-auto  gap-4 text-center  py-8   md:py-16    xl:py-20">
             <h1>Áreas de especialização</h1>
             <p>
               Especializo-me em diversos benefícios previdenciários, incluindo:
             </p>
+            <EmblaCarousel></EmblaCarousel>
           </div>
         </section>
 
         {/* Atendimento */}
         <section>
-          <div className="container flex flex-col mx-auto md:text-center px-6 py-8 space-y-4 md:px-8 md:py-16   xl:px-48 xl:py-20 ">
-            <h1 className=" md:self-center ">
-              Atendimento presencial e online
-            </h1>
-            <p className="md:self-center xl:text-xl xl:w-3/4">
+          <div className="container flex flex-col mx-auto md:text-center px-6 py-8 gap-4  md:px-8 md:py-16   xl:px-48 xl:py-20 items-center">
+            <h1 className="text-center">Atendimento presencial e online</h1>
+            <p className="md:self-center xl:text-xl xl:w-3/4 2xl:w-1/2 text-center">
               Entendemos que a comodidade é crucial, por isso oferecemos
               atendimento presencial e online. Independentemente de onde você
               esteja, estamos prontos para fornecer orientação jurídica
               personalizada e eficiente.
             </p>
-            <div className="flex flex-col md:flex-row  md:justify-center gap-8">
+            <div className="flex flex-col md:flex-row   gap-8 w-full my-8 2xl:w-3/4">
               <div
-                className="w-full h-[400px] rounded-3xl md:w-1/2 md:rounded-[64px] xl:w-1/2 xl:h-[500px] border-4 border-[#DFC181]"
+                className="w-full h-[400px] rounded-3xl  md:rounded-[64px] border-4 border-[#DFC181] md:w-1/2 xl:h-[500px]"
                 style={{
                   backgroundImage: 'url("/images/b1.avif")',
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}></div>
               <div
-                className="hidden md:block w-full h-[400px] rounded-3xl md:w-1/2 md:rounded-[64px] xl:w-1/2 xl:h-[500px] border-4 border-[#DFC181]"
+                className="hidden md:block w-full h-[400px] rounded-3xl md:w-1/2 md:rounded-[64px]  xl:h-[500px] border-4 border-[#DFC181]"
                 style={{
                   backgroundImage: 'url("/images/b2.avif")',
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}></div>
             </div>
-            <Link href="" className="flex flex-row">
+            <Link href="" className="flex flex-row ">
               <p className="zapbutton ">
                 <strong>Entre em contato</strong> e fale conosco
               </p>
@@ -164,9 +171,11 @@ export default function Home() {
 
         {/* Beneficios */}
         <section className="goldradial">
-          <div className="container flex flex-col  mx-auto px-6 py-8  md:px-8 md:py-16   xl:px-48 xl:py-20  space-y-8">
-            <h1 className="md:text-center">Benefícios<br></br>previdenciários</h1>
-            <ul className="space-y-4 [&>li]:flex [&>li]:flex-row [&>li]:gap-4 ">
+          <div className="container flex flex-col  mx-auto px-6 py-8  md:px-8 md:py-16   xl:px-48 xl:py-20  space-y-8 2xl:px-80 items-center ">
+            <h1 className="text-center">
+              Benefícios<br></br>previdenciários
+            </h1>
+            <ul className="space-y-4 [&>li]:flex [&>li]:flex-row [&>li]:gap-4 max-w-[600px]">
               <li className="">
                 <Image
                   className="w-16 h-16"
@@ -245,7 +254,7 @@ export default function Home() {
 
         {/* Segurança */}
         <section>
-          <div className="container flex flex-col md:flex-row mx-auto px-6 py-8 space-y-4 md:px-8 md:py-16 md:space-x-8 md:space-y-0 xl:px-48 xl:py-20 xl:space-x-12">
+          <div className="container flex flex-col md:flex-row mx-auto px-6 py-8 space-y-4 md:px-8 md:py-16 md:space-x-8 md:space-y-0 xl:px-48 xl:py-20 xl:space-x-12 2xl:px-80">
             <div
               className="w-full h-[400px] rounded-3xl md:w-1/2 md:rounded-[64px] xl:w-1/2 xl:h-[500px]"
               style={{

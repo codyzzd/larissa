@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { EmblaCarousel } from "./sliders/areas";
 
+//link cta
+const linkcta = "https://wa.me/5545998126005";
+
 export default function Home() {
   return (
     <>
@@ -44,7 +47,7 @@ export default function Home() {
                   Aqui, comprometemo-nos a proporcionar soluções eficazes e
                   personalizadas para suas questões previdenciárias.
                 </p>
-                <Link href="" className="flex flex-row">
+                <Link href={linkcta} className="flex flex-row">
                   <p className="zapbutton">
                     <strong>Entre em contato</strong> e fale conosco
                   </p>
@@ -115,7 +118,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <Link href="" className="flex flex-row">
+              <Link href={linkcta} className="flex flex-row">
                 <p className="zapbutton ">
                   <strong>Entre em contato</strong> e fale conosco
                 </p>
@@ -161,7 +164,7 @@ export default function Home() {
                   backgroundPosition: "center",
                 }}></div>
             </div>
-            <Link href="" className="flex flex-row ">
+            <Link href={linkcta} className="flex flex-row ">
               <p className="zapbutton ">
                 <strong>Entre em contato</strong> e fale conosco
               </p>
@@ -269,7 +272,7 @@ export default function Home() {
                 Entre em contato conosco para uma consulta inicial e permita-nos
                 guiar você pelos intricados caminhos do direito previdenciário.
               </p>
-              <Link href="" className="flex flex-row">
+              <Link href={linkcta} className="flex flex-row">
                 <p className="zapbutton ">
                   <strong>Entre em contato</strong> e fale conosco
                 </p>

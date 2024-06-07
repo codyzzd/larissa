@@ -7,13 +7,13 @@
     @apply text-3xl md:text-4xl  lg:text-5xl font-black;
   }
   .zapbutton {
-    @apply bg-green-500 text-white rounded-lg py-3 px-6 text-center  w-full md:w-auto;
+    @apply bg-[#25BD3D] text-white rounded-lg py-3 px-6 text-center  w-full md:w-auto;
   }
   .zapbutton:hover {
     @apply bg-green-600;
   }
   .goldradial{
-    background: 
+    background:
 radial-gradient(53.53% 53.53% at 60.66% 46.47%, rgba(255, 242, 213, 0.35) 0%, rgba(214, 180, 105, 0.35) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
   }
